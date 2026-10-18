@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The QuarkCreation | QuarkUniversity</title>
+<meta name="description" content="The QuarkCreation by QuarkUniversity: a 7-step roadmap for taking a character from a loose idea to artwork, commercial, merch, website and promotion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0d12;
+  --panel:#16161f;
+  --panel2:#1d1d29;
+  --ink:#f4f1ea;
+  --muted:#a9a6b5;
+  --pink:#ff2e93;
+  --yellow:#ffd23f;
+  --cyan:#22e5ff;
+  --lime:#9dff3d;
+  --line:#2c2c3b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;
+  line-height:1.65;
+  background-image:
+    radial-gradient(circle at 12% 8%,rgba(255,46,147,.14),transparent 40%),
+    radial-gradient(circle at 90% 30%,rgba(34,229,255,.10),transparent 40%),
+    radial-gradient(circle at 20% 80%,rgba(255,210,63,.08),transparent 40%);
+  background-attachment:fixed;
+}
+a{color:var(--cyan)}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(13,13,18,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+nav .wrap{display:flex;align-items:center;gap:14px;overflow-x:auto;padding:10px 20px;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav .brand{font-family:'Bangers',cursive;letter-spacing:1.5px;font-size:1.25rem;color:var(--yellow);white-space:nowrap;margin-right:6px}
+nav a{
+  color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:600;
+  white-space:nowrap;padding:5px 10px;border-radius:999px;border:1px solid transparent;
+}
+nav a:hover{color:var(--ink);border-color:var(--line)}
+
+/* HERO */
+header.hero{padding:84px 0 56px;text-align:center}
+.presents{
+  font-family:'Permanent Marker',cursive;color:var(--cyan);
+  font-size:1.05rem;letter-spacing:1px;margin-bottom:10px;
+}
+h1{
+  font-family:'Bangers',cursive;font-weight:400;
+  font-size:clamp(3.4rem,13vw,7.5rem);
+  line-height:.95;letter-spacing:3px;
+  color:var(--ink);
+  text-shadow:4px 4px 0 var(--pink),8px 8px 0 rgba(255,46,147,.35);
+  transform:rotate(-1.5deg);
+}
+h1 span{color:var(--yellow)}
+.by{
+  margin-top:26px;font-family:'Permanent Marker',cursive;
+  font-size:1.3rem;color:var(--lime);
+}
+.tagline{max-width:620px;margin:18px auto 0;color:var(--muted);font-size:1.05rem}
+.cta{
+  display:inline-block;margin-top:30px;
+  background:var(--yellow);color:#111;text-decoration:none;
+  font-family:'Bangers',cursive;font-size:1.4rem;letter-spacing:1.5px;
+  padding:10px 28px;border-radius:6px;
+  box-shadow:4px 4px 0 var(--pink);
+  transition:transform .15s,box-shadow .15s;
+}
+.cta:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--pink)}
+
+.startnote{
+  margin:10px auto 60px;max-width:760px;
+  border:2px dashed var(--yellow);border-radius:12px;
+  padding:18px 22px;background:rgba(255,210,63,.06);
+  display:flex;gap:14px;align-items:flex-start;
+}
+.startnote .icon{font-size:1.6rem;line-height:1}
+.startnote p{color:var(--ink)}
+.startnote strong{color:var(--yellow)}
+
+/* STEPS */
+.step{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:34px 34px 30px;
+  margin-bottom:34px;
+  position:relative;
+  overflow:hidden;
+}
+.step::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:6px;
+  background:var(--accent,var(--pink));
+}
+.step .num{
+  font-family:'Bangers',cursive;font-size:4.2rem;line-height:1;
+  color:var(--accent,var(--pink));opacity:.95;
+}
+.step h2{
+  font-family:'Bangers',cursive;font-weight:400;letter-spacing:1.5px;
+  font-size:2.1rem;line-height:1.1;margin:2px 0 14px;
+}
+.step h3{
+  font-family:'Permanent Marker',cursive;font-weight:400;
+  color:var(--accent,var(--pink));font-size:1.15rem;margin:26px 0 8px;
+}
+.step p{margin:10px 0;color:#dedbe6}
+.step ul{margin:10px 0 10px 4px;list-style:none}
+.step li{
+  position:relative;padding:5px 0 5px 28px;color:#dedbe6;
+}
+.step li::before{
+  content:"✦";position:absolute;left:2px;top:5px;
+  color:var(--accent,var(--pink));font-size:.9rem;
+}
+.step li ul{margin-top:4px}
+code,.prompt{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+.prompt{
+  display:block;margin:8px 0;padding:10px 14px;
+  background:#0b0b10;border:1px solid var(--line);border-left:3px solid var(--accent,var(--pink));
+  border-radius:8px;color:var(--lime);font-size:.88rem;line-height:1.5;
+}
+.example{
+  margin:18px 0;padding:16px 20px;border-radius:12px;
+  background:var(--panel2);border:1px solid var(--line);
+}
+.example .tag{
+  display:inline-block;font-family:'Bangers',cursive;letter-spacing:1.2px;
+  background:var(--accent,var(--pink));color:#111;padding:1px 12px;border-radius:4px;
+  font-size:1.05rem;margin-bottom:8px;
+}
+.example p{margin:6px 0;font-size:.97rem}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{
+  font-size:.78rem;font-weight:600;padding:4px 12px;border-radius:999px;
+  border:1px solid var(--accent,var(--pink));color:var(--ink);
+  background:rgba(255,255,255,.03);
+}
+.option{
+  margin-top:24px;padding:20px 22px;border-radius:12px;
+  border:2px dashed var(--accent,var(--pink));
+  background:rgba(255,255,255,.02);
+}
+.option h3{margin-top:0}
+.gh{
+  margin:12px 0;padding:14px 18px;border-radius:10px;background:#0b0b10;
+  border:1px solid var(--line);
+}
+.gh ol{margin-left:20px}
+.gh li{padding:3px 0;list-style:decimal}
+.gh li::before{content:none}
+
+/* accents */
+#s1{--accent:var(--pink)}
+#s2{--accent:var(--cyan)}
+#s3{--accent:var(--yellow)}
+#s4{--accent:var(--lime)}
+#s5{--accent:var(--pink)}
+#s6{--accent:var(--cyan)}
+#s7{--accent:var(--yellow)}
+
+/* FINAL */
+.loop{
+  text-align:center;padding:36px 20px;margin-bottom:60px;
+  border-radius:16px;border:2px solid var(--yellow);
+  background:linear-gradient(135deg,rgba(255,46,147,.15),rgba(255,210,63,.10));
+}
+.loop .big{
+  font-family:'Bangers',cursive;font-size:clamp(2.4rem,8vw,4.2rem);
+  letter-spacing:3px;color:var(--yellow);
+  text-shadow:3px 3px 0 var(--pink);
+}
+.loop p{color:var(--muted);margin-top:8px}
+
+footer{
+  border-top:1px solid var(--line);padding:34px 0 50px;text-align:center;
+  color:var(--muted);font-size:.9rem;
+}
+footer .f-brand{font-family:'Bangers',cursive;letter-spacing:2px;font-size:1.5rem;color:var(--ink)}
+footer .f-brand span{color:var(--pink)}
+footer p{margin-top:6px}
+
+@media (max-width:600px){
+  .step{padding:26px 20px 22px}
+  .step .num{font-size:3.4rem}
+  .step h2{font-size:1.75rem}
+  header.hero{padding:56px 0 40px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">QUARKUNIVERSITY</span>
+    <a href="#s1">1 Create</a>
+    <a href="#s2">2 Bring to life</a>
+    <a href="#s3">3 Edit</a>
+    <a href="#s4">4 Merch</a>
+    <a href="#s5">5 Website</a>
+    <a href="#s6">6 Promote</a>
+    <a href="#s7">7 Repeat</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="presents">QuarkUniversity presents</div>
+    <h1>The Quark<span>Creation</span></h1>
+    <div class="by">A QuarkForce character roadmap</div>
+    <p class="tagline">How to take a character from a loose thought to finished artwork, a commercial, merchandise, a website and a promotion plan. Seven steps, one folder.</p>
+    <a class="cta" href="#start">LET'S BUILD</a>
+  </div>
+</header>
+
+<main class="wrap" id="start">
+
+  <div class="startnote">
+    <div class="icon">📁</div>
+    <p><strong>Before anything else:</strong> make a folder where all the art, audio and video goes. Everything you create from here on lives in it.</p>
+  </div>
+
+  <!-- 1 -->
+  <section class="step" id="s1">
+    <div class="num">01</div>
+    <h2>Create the Character!</h2>
+    <ul>
+      <li>Get inspired by life and any other random thought or person.</li>
+      <li>Do a loose draw in pencil, on paper or in Procreate.</li>
+      <li>Gather references for character construction: arm and leg positions, etc.</li>
+      <li>Gather references for character accessories: bags, gloves, weapons, etc.</li>
+      <li>Scan to your computer if needed.</li>
+      <li>Tighten and finalize the drawing: final line work, shading, highlights and rendering.</li>
+      <li><strong>Name the character.</strong> It now has life and energy to begin its journey!</li>
+      <li>Make them a custom name logo that lives with them.</li>
+      <li>Name the folder after your character, and make sure everything you've created so far is in it.</li>
+    </ul>
+
+    <div class="example">
+      <span class="tag">EXAMPLE: GRAFFITI GRANNY</span>
+      <p>Graffiti Granny was created from a painting class I taught. I once had an older woman as a client. Her doctor told her she should learn how to paint and take a painting class, and she came to me. When I explained to my friends that I was teaching an older woman how to paint, they jokingly asked if I was teaching her graffiti. I found it very amusing and created this character!</p>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="step" id="s2">
+    <div class="num">02</div>
+    <h2>Bring the Character to Life!</h2>
+    <ul>
+      <li>Determine the character's "role" in the QuarkForce Universe.</li>
+    </ul>
+    <div class="example">
+      <span class="tag">FOR EXAMPLE</span>
+      <p>"Marvelous Wonderful would be perfect for X."</p>
+      <p>"Alagbarawo Shrunken turned out to be the perfect mascot for my CanvasWars art battle event." Some sort of bigger mission they can be a part of whenever they arise.</p>
+    </div>
+    <ul>
+      <li>This is where we begin to integrate digital tools.</li>
+      <li>Run your character through your favorite AI image generator with the prompt <code>Ultra Realistic</code> (or any similar variation, or a style of your choice). Regenerate and edit the prompt until you get the realistic version of your character that works best.</li>
+      <li><em>(Optional)</em> Run the character's name logo through your favorite AI image generator with a prompt like:
+        <span class="prompt">biker jacket patch logo</span>
+        Or any logo reveal style that fits your character.
+      </li>
+    </ul>
+
+    <h3>2.5 &mdash; Video Time!</h3>
+    <ul>
+      <li>Run your character through your favorite AI video generator at the appropriate aspect ratio, with a prompt like:
+        <span class="prompt">make a commercial for "Gloria BirdMoney Luxury Jewelry"</span>
+        Or any animation, prompt and style that fits your character. Collect about 2&ndash;3 good clips to use. (I use the free version of Flow by Google, with 10-second scene clips. Planning to upgrade to the paid version of Krea soon.)
+      </li>
+      <li>Run the character's name logo through your favorite AI video generator with a prompt like:
+        <span class="prompt">gold and diamonds luxury jewelry logo reveal</span>
+        Or any logo reveal style that fits your character and logo. (I use Flow with a 6-second clip.) We'll use it as the intro and outro of the video.
+      </li>
+      <li>Save everything in your character folder.</li>
+    </ul>
+
+    <div class="option">
+      <h3>+ Option B</h3>
+      <p>If the original prompt rendering didn't quite do what you'd like:</p>
+      <ul>
+        <li>Use your favorite AI to write you a script for your new character, or one that introduces the character.</li>
+        <li>Use the ElevenLabs voice AI generator. Find the voice tone and style that best fits, run the script you got, then generate and download.</li>
+        <li>Use Suno to find a "score" or instrumental you can use for the whole commercial.</li>
+      </ul>
+    </div>
+
+    <div class="tools">
+      <span class="chip">AI Image Generator</span>
+      <span class="chip">Flow by Google</span>
+      <span class="chip">Krea</span>
+      <span class="chip">ElevenLabs</span>
+      <span class="chip">Suno</span>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="step" id="s3">
+    <div class="num">03</div>
+    <h2>Video Editing</h2>
+    <p>I use Filmora to edit my video clips. There are many different video editing programs out there, so use your favorite.</p>
+    <ul>
+      <li>Bring all the video clips you'd like to use into your video editing software.</li>
+      <li>Bring all the audio you'd like to use into the software.</li>
+      <li>Insert the logo reveal intro.</li>
+      <li>Add scene 1 and scene 2.</li>
+      <li>Add the ElevenLabs audio to the scenes, if you're using it on the project.</li>
+      <li>Add the outro logo reveal.</li>
+      <li>Add the instrumental or "score" to the video project.</li>
+      <li>Render the project.</li>
+      <li>Export.</li>
+    </ul>
+    <div class="tools"><span class="chip">Filmora</span></div>
+  </section>
+
+  <!-- 4 -->
+  <section class="step" id="s4">
+    <div class="num">04</div>
+    <h2>Merchandise</h2>
+    <p>Character artwork and name logo designs are perfect for merchandising: shirts, hoodies, stickers, posters and more.</p>
+    <ul>
+      <li>I use <strong>Spreadshirt</strong> for softgoods.</li>
+      <li>I use <strong>Mixbook</strong> for prints.</li>
+      <li>I use <strong>Pendentify</strong> for pendants.</li>
+      <li>I use <strong>Mixam</strong> for my QuarkZines, and more.</li>
+    </ul>
+    <div class="tools">
+      <span class="chip">Spreadshirt</span>
+      <span class="chip">Mixbook</span>
+      <span class="chip">Pendentify</span>
+      <span class="chip">Mixam</span>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="step" id="s5">
+    <div class="num">05</div>
+    <h2>Website</h2>
+    <p>At this point you hopefully know your character pretty well. Ask yourself: <em>"If this character had a business, what would it be?"</em> or <em>"X would be the perfect character for this."</em></p>
+
+    <div class="example">
+      <span class="tag">EXAMPLE: ROBINBILLIONS</span>
+      <p>One of my characters, RobinBillions, is a sneaky thief. He has a big gold safe on his back and a cash register in his hand, and he's stepping over an alarm signal. I made his business a 24-hour moving service, then made a logo, a commercial and a webpage around that business.</p>
+    </div>
+
+    <h3>Build the page</h3>
+    <ul>
+      <li>Use your favorite AI to generate a Claude HTML prompt. My steps: upload and describe your character and the business they would most realistically run. For example:
+        <span class="prompt">make me a Claude prompt for a fully functional HTML website for "Angel Thump Babysitter Service"</span>
+      </li>
+      <li>Run the prompt through Claude and download the HTML code.</li>
+      <li>Once the HTML is downloaded, it must be named <code>index.html</code> to work in GitHub.</li>
+    </ul>
+
+    <h3>Host it on GitHub</h3>
+    <p>GitHub is the server I use to run the HTML code I receive from Claude.</p>
+    <div class="gh">
+      <ol>
+        <li>In GitHub, click the <strong>+</strong> button to make a new repository.</li>
+        <li>Add a name and description, then save.</li>
+        <li>Upload your existing HTML code.</li>
+        <li>Go to the <strong>Settings</strong> tab, then the <strong>Pages</strong> section. Change the branch from None to <strong>Main</strong> and save.</li>
+        <li>Make sure the file is titled <code>index.html</code>. If needed, you can rename it by clicking the pencil icon.</li>
+      </ol>
+    </div>
+    <ul>
+      <li>Once the site is fully active, you can adjust and edit as needed. I use Gemini to help with all my small technical adjustments once the HTML is up and running, via screenshots and so on.</li>
+      <li>Finally, I got my domains from IONOS (JawsGraffiti.com and canvassers.org) and was able to set them up to point directly to the GitHub sites easily.</li>
+    </ul>
+    <div class="tools">
+      <span class="chip">Claude</span>
+      <span class="chip">GitHub Pages</span>
+      <span class="chip">Gemini</span>
+      <span class="chip">IONOS</span>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="step" id="s6">
+    <div class="num">06</div>
+    <h2>Promote</h2>
+    <ul>
+      <li>I post or schedule the videos on my Facebook, Instagram and YouTube pages, with links to the character's webpage and to my main site, JawsGraffiti.com.</li>
+      <li>I do a weekly news post update under <strong>SharkWeekly</strong>, posted every Monday.</li>
+      <li>Share to the groups you're part of and tag your friends.</li>
+    </ul>
+    <div class="tools">
+      <span class="chip">Facebook</span>
+      <span class="chip">Instagram</span>
+      <span class="chip">YouTube</span>
+      <span class="chip">SharkWeekly</span>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section class="step" id="s7">
+    <div class="num">07</div>
+    <h2>Rinse and Repeat!</h2>
+    <p>Every character you finish makes the universe bigger. Start a new folder and go again.</p>
+  </section>
+
+  <div class="loop">
+    <div class="big">NEW CHARACTER. NEW FOLDER.</div>
+    <p>Welcome to the QuarkForce Universe.</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand">QUARK<span>UNIVERSITY</span></div>
+    <p>The QuarkCreation &middot; a QuarkForce character roadmap</p>
+    <p>Made in Medford, Oregon by Jaws</p>
+  </div>
+</footer>
+
+</body>
+</html>
